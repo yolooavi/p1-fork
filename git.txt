@@ -1,0 +1,61 @@
+git clone - se sirve para clonar un repositorio remoto a vsc o codespace
+
+OUTPUT:
+(base) wiki@laptop-Wiktoria pat % git clone https://github.com/yolooavi/p1-fork.git
+Cloning into 'p1-fork'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 5 (from 1)
+Receiving objects: 100% (6/6), done.
+
+
+git status - verifica el estado del repositorio, si cambios se han hecho - por ejemplo algo es cambiado, esta un nuevo documento o un documento es eliminado
+
+OUTPUT:
+(base) wiki@laptop-Wiktoria p1-fork % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .DS_Store
+        git.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+git add - añade especificos archivos o todos los archivos (git add .) modificados o nuevos al staging area, son preparado para el commit
+
+OUTPUT:
+después git add. no aparecieron logs
+
+
+git commit - hace un commit con el mensaje despues -m 
+
+OUTPUT:
+(base) wiki@laptop-Wiktoria p1-fork % git commit -m "added git.txt"
+[main 14d072c] added git.txt
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 .DS_Store
+ create mode 100644 git.txt
+
+
+git push - sube los cambios confirmados al repositorio remoto a rama especifica 
+
+OUTPUT:
+(base) wiki@laptop-Wiktoria p1-fork % git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 578 bytes | 578.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/yolooavi/p1-fork.git
+   07720b5..14d072c  main -> main
+
+
+git checkout - cambiamos rama a rama que existe o a nueva rama que es después de -b
+
+OUTPUT:
+(base) wiki@laptop-Wiktoria p1-fork % git checkout -b feat/add-gitFile
+Switched to a new branch 'feat/add-gitFile'
